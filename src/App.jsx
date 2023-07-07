@@ -60,12 +60,15 @@ const onNewGameStart = () => {
 
   return (
     <div className="app">
+    <h1>
+      <span className='text-orange'>TIC </span>TAC <span className='text-green'>TOE</span>
+    </h1>
       <StatusMessage winner={winner} gamingBoard={gamingBoard} />
       <Board squares={gamingBoard.squares} handleSquareClick={handleSquareClick} winningSquares={winningSquares}/>
 
       <button type="button" onClick={onNewGameStart} className={`btn-reset ${winner ? 'active' : ''}`}>Start New Game</button>
 
-      <h2>Current Gaming History</h2>
+      <h2 style={{fontWeight:'normal',}}>Current Gaming History</h2>
       <History history={history} moveTo={moveTo} currentMove={currentMove}/>
 
     </div>
